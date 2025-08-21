@@ -95,12 +95,12 @@ public class VentanaMateriaPrima extends Application {
         // prerellenar inventario
         MateriaPrima disco = new MateriaPrima("Dicos", 0.30);
         MateriaPrima queso = new MateriaPrima("Queso", 0.10);
-        
+
         MateriaPrima vaso = new MateriaPrima("Vaso", 0.05);
 
         inventario.add(disco);
         inventario.add(vaso);
-        
+
         inventario.add(queso);
 
         //inventario de accesorios
@@ -216,7 +216,7 @@ public class VentanaMateriaPrima extends Application {
                 alerta2.setContentText("El producto se guardó exitosamente");
                 alerta2.showAndWait();
                 System.out.println("Accion finaizada");
-                
+
             }
 
         });
@@ -230,10 +230,20 @@ public class VentanaMateriaPrima extends Application {
             areaResultado.setText("");
             productoActual = null;
         });
-        
-        
-        
-        
+
+        //Accion para el boton gestion
+        btnGestion.setOnAction(e -> {
+            VentanaGestion gestion = new VentanaGestion();
+            Scene sceneGestion = gestion.getScene();
+
+            // 3. Creamos un nuevo Stage (la ventana)
+            Stage stageGestion = new Stage();
+            stageGestion.setTitle("Ventana de Gestión");
+            stageGestion.setScene(sceneGestion);
+
+            // 4. Mostramos la nueva ventana
+            stageGestion.show();
+        });
 
     }
 
