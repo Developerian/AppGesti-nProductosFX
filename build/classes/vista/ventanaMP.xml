@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<VBox xmlns="http://javafx.com/javafx" 
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controladores.VentanaMateriaPrima"
+      spacing="15" padding="20">
+
+    <!-- Fila Producto -->
+    <HBox spacing="15">
+        <Label text="Producto"/>
+        <TextField fx:id="nombreProducto" promptText="Nombre del producto"/>
+        <Button text="Crear producto" onAction="#crearProducto"/>
+    </HBox>
+
+    <!-- Fila Ingredientes -->
+    <HBox spacing="15">
+        <Label text="Ingredientes"/>
+        <ComboBox fx:id="comboIngredientes"/>
+        <Button text="Agregar ingrediente" onAction="#agregarIngrediente"/>
+    </HBox>
+
+    <!-- Fila Accesorios -->
+    <HBox spacing="15">
+        <Label text="Accesorios"/>
+        <ComboBox fx:id="comboAccesorios"/>
+        <Button text="Agregar accesorios" onAction="#agregarAccesorio"/>
+    </HBox>
+
+    <!-- Fila Añadidos -->
+    <HBox spacing="15">
+        <Label text="Añadidos"/>
+        <ComboBox fx:id="comboAgregados"/>
+        <Button text="Agregar añadidos" onAction="#agregarAgregado"/>
+    </HBox>
+
+    <!-- Botones principales -->
+    <GridPane hgap="20" vgap="10" padding="10">
+        <Button text="Calcular costo" onAction="#calcularCosto" GridPane.columnIndex="1"/>
+        <Button text="Consultar productos" GridPane.columnIndex="2"/>
+        <Button text="Limpiar campos" onAction="#limpiar" GridPane.columnIndex="3"/>
+    </GridPane>
+
+    <Label text="Información:"/>
+    <TextArea fx:id="areaResultado" editable="false"/>
+
+    <!-- Botones finales -->
+    <GridPane hgap="100" vgap="10" padding="10">
+        <Button text="Guardar" onAction="#guardar" GridPane.columnIndex="1"/>
+        <Button text="Gestión" onAction="#abrirGestion" GridPane.columnIndex="2"/>
+    </GridPane>
+
+</VBox>
